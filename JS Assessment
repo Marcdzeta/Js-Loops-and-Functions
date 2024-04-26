@@ -1,0 +1,38 @@
+const NFTs = [];
+
+function mintNFT (_name, _hairColor, _shirtType, _accessories) {
+  const newNFT = {
+    "name": _name,
+    "hairColor": _hairColor,
+    "shirtType": _shirtType,
+    "accessories": _accessories
+  };
+   NFTs.push(newNFT);
+   console.log("Minted:" + _name);
+
+}
+
+function listNFTs () {
+for (let i = 0; i < NFTs.length; i++) {
+  console.log("\nID: \t\t" + (i + 1));
+  console.log("Name: \t\t" + NFTs[i].name);
+  console.log("Haircolor: \t" + NFTs[i].hairColor);
+  console.log("Shirt Type: " + NFTs[i].shirtType);
+  console.log("Accessories \t\t" + NFTs[i].accessories);
+}
+}
+
+
+// print the total number of NFTs we have minted to the console
+function getTotalSupply() {
+console.log("\n" + NFTs.length);
+}
+
+// call your functions below this line
+mintNFT("Marc", "Black", "Shortsleeve", "Gold Necklace");
+mintNFT("Dan", "Brown", "Gymshirt", "Headset");
+mintNFT("Md", "White", "Hoodie", "Silver Watch");
+mintNFT("Danniel", "Gray", "Shirt", "Ankle Lace");
+listNFTs();
+getTotalSupply();
+
